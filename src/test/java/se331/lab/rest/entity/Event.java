@@ -13,6 +13,6 @@ public class Event {
     String location;
     String date;
     String time;
-    String petAllowed;
+    Boolean petAllowed;
     String organizer;
 }
