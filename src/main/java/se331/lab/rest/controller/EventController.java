@@ -104,11 +104,11 @@ public class EventController {
             throw new
                     ResponseStatusException(HttpStatus.NOT_FOUND,"The given id is not found");
         }
+
     }
+    @GetMapping("events")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false)
-                Integer perPage
-                    ,@RequestParam(value = "_page", required = false)
-            Integer page)
+                Integer perPage,@RequestParam(value = "_page", required = false) Integer page)
         {
             perPage = perPage == null?eventList.size():perPage;
             page = page == null?1:page;
